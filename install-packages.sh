@@ -25,7 +25,7 @@ trap handle_error ERR
 # Update and install prerequisites
 echo "Updating package list and installing prerequisites..."
 wait_for_dpkg_lock
-apt-get update && apt-get install -y wget gnupg lsb-release software-properties-common
+apt-get install -y wget gnupg lsb-release software-properties-common
 
 # Install cloudflared
 echo "Installing cloudflared..."
