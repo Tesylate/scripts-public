@@ -41,11 +41,6 @@ wait_for_dpkg_lock
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 wget -qO /etc/apt/sources.list.d/microsoft-prod.list https://packages.microsoft.com/config/debian/11/prod.list
 
-# Update package lists again to include the Microsoft repository
-echo "Updating package list after adding Microsoft repository..."
-wait_for_dpkg_lock
-apt-get update
-
 # Install msodbcsql18
 echo "Installing msodbcsql18 (Microsoft SQL Server ODBC driver)..."
 wait_for_dpkg_lock
